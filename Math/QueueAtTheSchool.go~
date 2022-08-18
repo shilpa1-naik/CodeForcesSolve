@@ -1,0 +1,55 @@
+package main
+
+import (
+	"fmt"
+)
+
+func replaceAtIndex(str string, index int, replacement rune) string {
+	out := []rune(str)
+	out[index] = replacement
+	return string(out)
+}
+
+
+/*
+func  main() {
+	var n, x int
+	fmt.Scanln(&n, &x)
+	var str string
+	fmt.Scanln(&str)
+	for x > 0 {
+		for i := 0; i < n - 1; i++ {
+			if str[i] == 'B' && str[i+1] == 'G' {
+				str = replaceAtIndex(str, i, 'G')
+				str = replaceAtIndex(str, i+1, 'B')
+				i++
+			}
+		}
+		x--;
+	}
+	fmt.Println(str)
+	
+}
+*/
+
+func main() {
+	var n, x int
+	fmt.Scanln(&n, &x)
+
+	var str []byte 
+	fmt.Scanln(&str)
+
+        for x > 0 {
+                for i := 0; i < n - 1; i++ {
+                        if str[i] == 'B' && str[i+1] == 'G' {
+				str[i], str[i+1] = str[i+1], str[i]
+                                i++
+                        }
+                }
+                x--;
+        }
+        fmt.Println(str)
+	
+	
+
+}

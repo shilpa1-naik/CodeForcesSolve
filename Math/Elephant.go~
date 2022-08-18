@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var n int
+	fmt.Scanln(&n)
+	quo := n / 5
+	rem := n % 5
+	fmt.Println( quo + (rem > 0 ? 1 : 0))
+
+}

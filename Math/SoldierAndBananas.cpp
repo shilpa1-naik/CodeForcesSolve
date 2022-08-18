@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int k, n, w;
+    cin >> k >> n >> w;
+
+    int dollarsNeeded = 0;
+
+    for ( int i = 1; i <= w; ++i ) {
+	dollarsNeeded += i * k;
+    }
+
+    cout << ((  (dollarsNeeded - n ) < 0) ? 0 : ( dollarsNeeded - n )) ; 
+}

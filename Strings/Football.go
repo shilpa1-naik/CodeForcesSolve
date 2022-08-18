@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var inp string
+	var count1, count0 int
+	fmt.Scanln(&inp)
+	for _, ch  := range(inp) {
+		if ch == '1' {
+			count1++;
+			count0 = 0;
+		} else {
+			count0++;
+			count1 = 0;
+		}
+		if count1 >= 7 || count0 >= 7 {
+			fmt.Println("YES\n");
+			return;
+		} 
+	}
+	fmt.Println("NO\n");	
+}
